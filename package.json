@@ -1,0 +1,19 @@
+{
+  "name": "devops-mini-proj-tdd-greetings",
+  "version": "1.0.0",
+  "description": "Groupe 12 :\r TEMSAMANI Imane\r OUFTALLAH Youssef\r REKAYA Nour",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imane-temsamani-vinci/devops-mini-proj-tdd-greetings.git"
+  },
+  "author": "Groupe-12",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imane-temsamani-vinci/devops-mini-proj-tdd-greetings/issues"
+  },
+  "homepage": "https://github.com/imane-temsamani-vinci/devops-mini-proj-tdd-greetings#readme"
+}
