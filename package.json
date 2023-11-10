@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint":"eslint .",
-    "lint:fix":"eslint --fix .",
-    "code:fix":"prettier --write . && eslint --fix ."
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "code:fix": "prettier --write . && eslint --fix .",
+    "teste": "jest --coverage",
+    "test:watch": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-n": "^16.3.0",
-    "eslint-plugin-promise": "^6.1.1"
+    "eslint-plugin-promise": "^6.1.1",
+    "jest": "^29.7.0"
   }
 }
