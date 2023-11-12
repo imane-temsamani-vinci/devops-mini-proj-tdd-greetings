@@ -4,13 +4,12 @@
   "description": "Groupe 12 :\r TEMSAMANI Imane\r OUFTALLAH Youssef\r REKAYA Nour",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "code:fix": "prettier --write . && eslint --fix .",
-    "teste": "jest --coverage",
+    "test": "jest --coverage",
     "test:watch": "jest --watchAll"
   },
   "repository": {
