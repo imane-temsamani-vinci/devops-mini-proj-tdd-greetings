@@ -1,7 +1,8 @@
 console.log('Hello World')
 
 function greet (name) {
-  return `Hello, ${name}!`
+  if(name == null || name.trim() == "") return "Hello, my friend.";
+  return `Hello, ${name}.`
 }
 
 module.exports = greet
