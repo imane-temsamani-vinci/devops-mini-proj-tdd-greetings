@@ -1,4 +1,4 @@
-const greet = require('./app')
+const greet = require('../greet')
 
 test('should return Hello, Bob!', () => {
   const result = greet('Bob')
