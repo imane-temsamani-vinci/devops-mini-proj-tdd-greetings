@@ -30,8 +30,14 @@ test('greet should return HELLO, KENOBI!', () => {
   expect(result).toBe('HELLO, KENOBI!')
 })
 
-// Case 4 when name is an array
+// Case 4 when name is an array of 2 names
 test('greet should return Hello, Kratos and Thanathos.', () => {
   const result = greet(['Kratos', 'Thanathos'])
   expect(result).toBe('Hello, Kratos and Thanathos.')
+})
+
+// Case 5 when name is an array of more than 2 names
+test('greet should return Hello, Kratos, Thanathos and Hypnos.', () => {
+  const result = greet(['Kratos', 'Thanathos', 'Hypnos'])
+  expect(result).toBe('Hello, Kratos, Thanathos and Hypnos.')
 })
