@@ -2,10 +2,7 @@ function greet (name) {
   if (Array.isArray(name)) {
     const language = name.find(lang => lang === 'fr' || lang === 'en')
     if (name.length === 2 && language) {
-      const vocabulary = greetIn(language)
-      const n = name.find(name => name !== language)
-      if (isUpperCase(n)) return `${vocabulary[0].toUpperCase()}, ${n}!`
-      return `${vocabulary[0]}, ${n}.`
+      return greetOneName(name, language)
     }
     return greetMultipleNames(name, language)
   }
@@ -38,6 +35,13 @@ function greetMultipleNames (array, language) {
 function greetIn (language) {
   if (language === 'fr') return ['Bonjour', 'et', 'mon ami']
   else return ['Hello', 'and', 'my friend']
+}
+
+function greetOneName (array, language) {
+  const vocabulary = greetIn(language)
+  const n = array.find(name => name !== language)
+  if (isUpperCase(n)) return `${vocabulary[0].toUpperCase()}, ${n}!`
+  return `${vocabulary[0]}, ${n}.`
 }
 
 module.exports = greet
