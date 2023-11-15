@@ -13,9 +13,15 @@ function isUpperCase (name) {
 }
 
 function greetMultipleNames (array) {
+  const nameUpper = array.find(name => isUpperCase(name))
+  if (nameUpper) array = array.filter(name => !isUpperCase(name))
   const lastName = array[array.length - 1]
   const withoutLast = array.slice(0, -1)
-  return `Hello, ${withoutLast.join(', ')} and ${lastName}.`
+  let greet = `Hello, ${withoutLast.join(', ')} and ${lastName}.`
+  if (nameUpper) {
+    greet += ` AND HELLO ${nameUpper}!`
+  }
+  return greet
 }
 
 module.exports = greet
