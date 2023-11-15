@@ -4,6 +4,7 @@ function greet (name) {
     if (name.length === 2 && language) {
       const vocabulary = greetIn(language)
       const n = name.find(name => name !== language)
+      if (isUpperCase(n)) return `${vocabulary[0].toUpperCase()}, ${n}!`
       return `${vocabulary[0]}, ${n}.`
     }
     return greetMultipleNames(name, language)
