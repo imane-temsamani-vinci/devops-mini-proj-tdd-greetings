@@ -1,6 +1,11 @@
 function greet (name) {
   if (Array.isArray(name)) {
-    const language = name.find(lang => lang === 'fr')
+    const language = name.find(lang => lang === 'fr' || lang === 'en')
+    if (name.length === 2 && language) {
+      const vocabulary = greetIn(language)
+      const n = name.find(name => name !== language)
+      return `${vocabulary[0]}, ${n}.`
+    }
     return greetMultipleNames(name, language)
   }
   if (name === null || name === undefined || name.trim() === '') return 'Hello, my friend.'
