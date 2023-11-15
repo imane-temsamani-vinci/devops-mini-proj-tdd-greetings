@@ -21,19 +21,17 @@ function greetMultipleNames (array, language) {
     else if (name !== 'fr') withoutUpper.push(name)
   })
   const lastName = withoutUpper.pop()
-  let greet = ''
-  if (language === 'fr') {
-    greet = `Bonjour, ${withoutUpper.join(', ')} et ${lastName}.`
-    if (nameUpper) {
-      greet += ` ET BONJOUR ${nameUpper}!`
-    }
-  } else {
-    greet = `Hello, ${withoutUpper.join(', ')} and ${lastName}.`
-    if (nameUpper) {
-      greet += ` AND HELLO ${nameUpper}!`
-    }
+  const vocabulary = greetIn(language)
+  let greet = `${vocabulary[0]}, ${withoutUpper.join(', ')} ${vocabulary[1]} ${lastName}.`
+  if (nameUpper) {
+    greet += ` ${vocabulary[1].toUpperCase()} ${vocabulary[0].toUpperCase()} ${nameUpper}!`
   }
   return greet
+}
+
+function greetIn (language) {
+  if (language === 'fr') return ['Bonjour', 'et', 'mon ami']
+  else return ['Hello', 'and', 'my friend']
 }
 
 module.exports = greet
