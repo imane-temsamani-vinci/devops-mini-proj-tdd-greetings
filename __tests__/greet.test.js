@@ -65,3 +65,9 @@ test('greet should return BONJOUR, KRATOS!', () => {
   const result = greet(['KRATOS', 'fr'])
   expect(result).toBe('BONJOUR, KRATOS!')
 })
+
+// Case 7 when name is an array with 'nl'
+test('greet should return Goeiedag, Kratos en Thanatos.', () => {
+  const result = greet(['Kratos', 'nl', 'Thanatos'])
+  expect(result).toBe('Goeiedag, Kratos en Thanatos.')
+})

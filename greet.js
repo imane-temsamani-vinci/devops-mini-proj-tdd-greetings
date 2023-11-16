@@ -1,6 +1,6 @@
 function greet (name) {
   if (Array.isArray(name)) {
-    const language = name.find(lang => lang === 'fr' || lang === 'en')
+    const language = name.find(lang => lang === 'fr' || lang === 'en' || lang === 'nl')
     if (name.length === 2 && language) {
       return greetOneName(name, language)
     }
@@ -21,7 +21,7 @@ function greetMultipleNames (array, language) {
   const withoutUpper = []
   array.forEach(name => {
     if (isUpperCase(name)) nameUpper = name
-    else if (name !== 'fr') withoutUpper.push(name)
+    else if (name !== 'fr' && name !== 'nl') withoutUpper.push(name)
   })
   const lastName = withoutUpper.pop()
   const vocabulary = greetIn(language)
@@ -34,6 +34,7 @@ function greetMultipleNames (array, language) {
 
 function greetIn (language) {
   if (language === 'fr') return ['Bonjour', 'et', 'mon ami']
+  else if (language === 'nl') return ['Goeiedag', 'en', 'mijn vriend']
   else return ['Hello', 'and', 'my friend']
 }
 
