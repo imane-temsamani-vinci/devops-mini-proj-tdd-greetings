@@ -33,9 +33,9 @@ function greetMultipleNames (array, language) {
 }
 
 function greetIn (language) {
-  if (language === 'fr') return ['Bonjour', 'et', 'mon ami']
-  else if (language === 'nl') return ['Goeiedag', 'en', 'mijn vriend']
-  else return ['Hello', 'and', 'my friend']
+  if (language === 'fr') return ['Bonjour', 'et']
+  else if (language === 'nl') return ['Goeiedag', 'en']
+  else return ['Hello', 'and']
 }
 
 function greetOneName (array, language) {
