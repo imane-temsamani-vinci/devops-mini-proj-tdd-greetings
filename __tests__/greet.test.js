@@ -47,3 +47,33 @@ test('greet should return Hello, Amy and Charlotte. AND HELLO BRIAN!', () => {
   const result = greet(['Amy', 'BRIAN', 'Charlotte'])
   expect(result).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN!')
 })
+
+// Case 7 when name is an array with 'fr'
+test('greet should return Bonjour, Kratos et Thanatos', () => {
+  const result = greet(['Kratos', 'Thanatos', 'fr'])
+  expect(result).toBe('Bonjour, Kratos et Thanatos.')
+})
+
+// Case 7 when name is an array with 'fr' and one name
+test('greet should return Bonjour, Kratos.', () => {
+  const result = greet(['Kratos', 'fr'])
+  expect(result).toBe('Bonjour, Kratos.')
+})
+
+// Case 7 when name is an array with 'fr' and one name in UPPERCASE
+test('greet should return BONJOUR, KRATOS!', () => {
+  const result = greet(['KRATOS', 'fr'])
+  expect(result).toBe('BONJOUR, KRATOS!')
+})
+
+// Case 7 when name is an array with 'nl'
+test('greet should return Goeiedag, Kratos en Thanatos.', () => {
+  const result = greet(['Kratos', 'nl', 'Thanatos'])
+  expect(result).toBe('Goeiedag, Kratos en Thanatos.')
+})
+
+// Case 7 when name is an array with 'nl' and one name in UPPERCASE
+test('greet should return GOEIEDAG, KRATOS!', () => {
+  const result = greet(['KRATOS', 'nl'])
+  expect(result).toBe('GOEIEDAG, KRATOS!')
+})
