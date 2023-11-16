@@ -15,5 +15,9 @@ npm install
 ## Run the project
 
 ```bash
-npm start
+npm test
+```
+OR
+```bash
+npm test:watch
 ```
