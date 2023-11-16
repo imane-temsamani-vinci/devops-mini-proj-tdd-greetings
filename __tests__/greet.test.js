@@ -71,3 +71,9 @@ test('greet should return Goeiedag, Kratos en Thanatos.', () => {
   const result = greet(['Kratos', 'nl', 'Thanatos'])
   expect(result).toBe('Goeiedag, Kratos en Thanatos.')
 })
+
+// Case 7 when name is an array with 'nl' and one name in UPPERCASE
+test('greet should return GOEIEDAG, KRATOS!', () => {
+  const result = greet(['KRATOS', 'nl'])
+  expect(result).toBe('GOEIEDAG, KRATOS!')
+})
