@@ -2,42 +2,42 @@ name: Continuous Integration
 run-name: Pipeline launched by ${{ github.actor }}
 
 on:
-  pull_request:
-    branches:
-      - main
+    pull_request:
+        branches:
+            - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checking repository
-        uses: actions/checkout@v3
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checking repository
+              uses: actions/checkout@v3
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      
-      - name: Installing Dependencies
-        run: npm install
+            - name: Install Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
 
-      - name: Display Start Time
-        run: echo "Pipeline start time :$(date +'%T')"
-      
-      - name: Checking format
-        run: npm run prettier
+            - name: Installing Dependencies
+              run: npm install
 
-      - name: Checking Lint
-        run: npm run lint
-      
-      - name: Checking unit tests
-        run: npm test
+            - name: Display Start Time
+              run: echo "Pipeline start time :$(date +'%T')"
 
-      - name: Building the app
-        run: npm run build
-      
-      - name: Display End Time
-        run: echo "Pipeline end time :$(date +'%T')"
-      
-      - name: Display Success Message
-        run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
+            - name: Checking format
+              run: npm run prettier
+
+            - name: Checking Lint
+              run: npm run lint
+
+            - name: Checking unit tests
+              run: npm test
+
+            - name: Building the app
+              run: npm run build
+
+            - name: Display End Time
+              run: echo "Pipeline end time :$(date +'%T')"
+
+            - name: Display Success Message
+              run: echo "PIPELINE SUCCESS WITHOUT ERRORS"

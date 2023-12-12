@@ -8,7 +8,9 @@ function greet (name) {
     }
     return greetMultipleNames(name, language);
   }
-  if (name === null || name === undefined || name.trim() === '') { return 'Hello, my friend.'; }
+  if (name === null || name === undefined || name.trim() === '') {
+    return 'Hello, my friend.';
+  }
   if (isUpperCase(name)) return `HELLO, ${name}!`;
 
   return `Hello, ${name}.`;
