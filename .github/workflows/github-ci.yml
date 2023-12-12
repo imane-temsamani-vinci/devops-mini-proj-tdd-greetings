@@ -22,4 +22,7 @@ jobs:
         run: npm install
 
       - name: Display Start Time
-        run: echo "Pipeline start time :$(date)"  
+        run: echo "Pipeline start time :$(date)"
+      
+      - name: Checking format
+        run: npm run prettier
