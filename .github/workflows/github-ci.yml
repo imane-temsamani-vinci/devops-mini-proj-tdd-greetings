@@ -19,4 +19,7 @@ jobs:
           node-version: 18
       
       - name: Installing Dependencies
-        run: npm install    
+        run: npm install
+
+      - name: Display Start Time
+        run: echo "Pipeline start time :$(date)"  
