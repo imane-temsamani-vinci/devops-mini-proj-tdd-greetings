@@ -38,3 +38,6 @@ jobs:
       
       - name: Display End Time
         run: echo "Pipeline end time :$(date +'%T')"
+      
+      - name: Display Success Message
+        run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
