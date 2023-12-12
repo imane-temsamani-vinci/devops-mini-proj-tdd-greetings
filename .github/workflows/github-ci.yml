@@ -10,6 +10,9 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
+            - name: Display Start Time
+              run: echo "Pipeline start time :$(date +'%T')"
+
             - name: Checking repository
               uses: actions/checkout@v3
 
@@ -20,9 +23,6 @@ jobs:
 
             - name: Installing Dependencies
               run: npm install
-
-            - name: Display Start Time
-              run: echo "Pipeline start time :$(date +'%T')"
 
             - name: Checking format
               run: npm run prettier
