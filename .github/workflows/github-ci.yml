@@ -1,0 +1,6 @@
+name: Continuous Integration 
+run-name: Pipeline launched by ${{ github.actor }}
+on:
+  pull_request:
+    branches:
+      - main
