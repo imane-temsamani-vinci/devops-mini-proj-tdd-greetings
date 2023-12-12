@@ -33,11 +33,13 @@
     },
     "jest": {
         "collectCoverage": true,
-        "collectCoverageFrom": ["./src/**"],
+        "collectCoverageFrom": [
+            "./src/**"
+        ],
         "coverageThreshold": {
-          "global": {
-            "lines": 80
-          }
+            "global": {
+                "lines": 80
+            }
         }
     }
 }
