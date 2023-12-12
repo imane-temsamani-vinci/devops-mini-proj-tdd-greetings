@@ -1,12 +1,19 @@
 name: Continuous Integration 
 run-name: Pipeline launched by ${{ github.actor }}
+
 on:
   pull_request:
     branches:
       - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checking repository 
         uses: actions/checkout@v3
+
+      - name: Install Node.js
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
