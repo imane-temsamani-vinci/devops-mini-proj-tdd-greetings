@@ -17,7 +17,9 @@ npm install
 ```bash
 npm test
 ```
+
 OR
+
 ```bash
 npm test:watch
 ```
