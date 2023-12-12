@@ -1,4 +1,4 @@
-const greet = require('../greet');
+const greet = require('../src/greet');
 
 // Case 1
 test('greet should return Hello, Bob.', () => {
