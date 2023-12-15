@@ -1,6 +1,6 @@
 # DevOps Mini-Projet 2
 
-Travail de recherche , mettre en place de l'integration continue avec les GitHub Actions
+Travail de recherche, mettre en place de l'integration continue avec les GitHub Actions
 
 ## Informations
 
